@@ -41,16 +41,14 @@ targetEditBtn.addEventListener("click", textCardRed);
 let targetCard2 = document.querySelector("body > main > div > div > div > div:nth-child(2)");
 let targetEditBtn2 = document.querySelector("body > main > div > div > div > div:nth-child(2) > div > div > div > div > button.btn.btn-sm.btn-outline-secondary");
 
-console.log(targetCard2);
+console.log("targetCard2.style.color", targetCard2.style.color);
 console.log(targetEditBtn2);
 
 
 function textCardToggle(){
-  if (targetCard2.style.color != "red"){
-    targetCard2.style.color = "red";
-  }
-  else
-  if (targetCard2.style.color === "red"){
+  if (targetCard2.style.color === "green"){
+    targetCard2.style.color = "";
+  } else {
     targetCard2.style.color = "green";
   }
 }
@@ -103,4 +101,6 @@ function minimiseCard(){
 
 //TRYING TO MAKE LENGHT WORK.
 let numberOfCards = document.querySelector("body > main > div > div > div > div:nth-child(1) > div");
-console.log(numberOfCards.length)
+console.log(numberOfCards);
+}
+minimiseCard();
