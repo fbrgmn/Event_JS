@@ -79,17 +79,21 @@ targetNavbar.addEventListener("dblclick", disableLink);
 /****
   F6. réduire Card
 ****/
-
 let targetAllCards = document.querySelectorAll(".col-md-4");
 for (let i = 0; i < targetAllCards.length; i++) {
     let targetCardText = targetAllCards[i].querySelector('.card-text');
+    //console.log("F6 targetCardText ", targetCardText);
     let targetCardImg = targetAllCards[i].querySelector('.card-img-top');
+    //console.log("F6 targetCardImg ", targetCardImg);
     let viewButton = targetAllCards[i].querySelector('.btn-success');
 
     viewButton.addEventListener("mouseover", function () {
         targetCardText.classList.toggle("collapse");
+        //console.log("F6 targetCardText toggle ", targetCardText);
         let imgStyle = document.createAttribute("style");
         imgStyle.value = "width: 20%;";
+        //console.log("F6 imgStyle style ", imgStyle);
+
         if (targetCardImg.hasAttribute('style')) {
             targetCardImg.removeAttribute('style');
         } else {
